@@ -1,0 +1,73 @@
+body {
+  background-color: brown;
+}
+
+.logo {
+  height: 100px;
+  width: 200px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 20fr);
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.main_card {
+  position: relative;
+  height: 350px;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front_card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+.back_card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  background: darkslategray;
+  color: aliceblue;
+}
+
+.card_img {
+  height: 100%;
+  width: 100%;
+}
+
+.back_card h1 {
+  text-align: center;
+  font-size: 30px;
+  padding: 0px 20px 0px 20px;
+  margin-bottom: 0px;
+}
+
+.back_card li {
+  list-style: none;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
